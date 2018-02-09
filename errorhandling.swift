@@ -1,6 +1,6 @@
 //
 //  errorhandling.swift
-//  classactivity
+//  day9
 //
 //  Created by MacStudent on 2018-02-09.
 //  Copyright © 2018 MacStudent. All rights reserved.
@@ -8,22 +8,18 @@
 
 import Foundation
 
-enum ticket : Error
-{
-     case notp
-     case speed
-     case redlightbrake
-     case seatbelt
-     case inlicense
-    }
+//breakdown of code that not allowed further to execute program
+// error is a protocol
+enum limitIncreaseError: Error {
+    case insufficientbalance(balanceneeded: Double)
+    case nosavingaccount
+    case ineligible
+}
 
-struct check
-{
-    var typ : String
-    var speed : Double
-    var liissue : String
-    var passvalue : String
-    var license : String
-    //var fine : Double
-    }
+struct requestsfromaccount {
+    var type: String
+    var balance: Double
+    var reqstatus: String
+}
 
+//write the func to execute request
